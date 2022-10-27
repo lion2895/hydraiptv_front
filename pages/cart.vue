@@ -1,87 +1,134 @@
 <template>
-  <v-stepper v-model="e1">
-    <v-stepper-header>
-      <v-stepper-step
-        :complete="e1 > 1"
-        step="1"
+  <v-stepper
+    v-model="e6"
+    vertical
+  >
+    <v-stepper-step
+      :complete="e6 > 1"
+      editable
+      step="1"
+    >
+      Cart
+
+    </v-stepper-step>
+
+    <v-stepper-content step="1" class="">
+
+
+      <div>
+        <vs-row class="mb-8">
+          <vs-card type="2" class="mr-4  mb-4">
+            <template #title>
+              <h3>Pot with a plant</h3>
+            </template>
+            <template #img>
+              <img src="https://vuesax.com/foto6.png" alt="">
+            </template>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <v-icon v-text="'mdi-close-octagon'"></v-icon>
+
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card type="2" class="mr-4 mb-4">
+            <template #title>
+              <h3>Pot with a plant</h3>
+            </template>
+            <template #img>
+              <img src="https://vuesax.com/foto6.png" alt="">
+            </template>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <v-icon v-text="'mdi-close-octagon'"></v-icon>
+
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card type="2" class="mr-4 mb-4">
+            <template #title>
+              <h3>Pot with a plant</h3>
+            </template>
+            <template #img>
+              <img src="https://vuesax.com/foto6.png" alt="">
+            </template>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <v-icon v-text="'mdi-close-octagon'"></v-icon>
+
+              </vs-button>
+            </template>
+          </vs-card>
+        </vs-row>
+      </div>
+
+
+
+
+
+
+
+      <v-btn
+        color="primary"
+        @click="e6 = 2"
       >
-        Name of step 1
-      </v-stepper-step>
+        Continue
+      </v-btn>
+    </v-stepper-content>
 
-      <v-divider></v-divider>
+    <v-stepper-step
+      :complete="e6 > 2"
 
-      <v-stepper-step
-        :complete="e1 > 2"
-        step="2"
-      >
-        Name of step 2
-      </v-stepper-step>
+      step="2"
+    >
+      Payment
+    </v-stepper-step>
 
-      <v-divider></v-divider>
+    <v-stepper-content step="2">
 
-      <v-stepper-step step="3">
-        Name of step 3
-      </v-stepper-step>
-    </v-stepper-header>
 
-    <v-stepper-items>
-      <v-stepper-content step="1">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
-
-        <v-btn
-          color="primary"
-          @click="e1 = 2"
+      <div>
+        <vs-row :w="12">
+        <vs-button>
+          <template  >
+            <v-icon class="mr-3" v-text="'mdi-credit-card'"></v-icon>
+          </template>
+          Credit Card
+        </vs-button>
+        <vs-button
+          warn
+          gradient
         >
-          Continue
-        </v-btn>
+          Paypal
+        </vs-button>
+        </vs-row>
+      </div>
 
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
+      <v-card
+        color="grey lighten-1"
+        class="mb-12"
+        height="200px"
+      ></v-card>
 
-      <v-stepper-content step="2">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
 
-        <v-btn
-          color="primary"
-          @click="e1 = 3"
-        >
-          Continue
-        </v-btn>
+    </v-stepper-content>
 
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
 
-      <v-stepper-content step="3">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
-
-        <v-btn
-          color="primary"
-          @click="e1 = 1"
-        >
-          Continue
-        </v-btn>
-
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
-    </v-stepper-items>
   </v-stepper>
 </template>
 
@@ -90,7 +137,7 @@ export default {
   name: "cart",
   data () {
     return {
-      e1: 1,
+      e6: 1,
     }
   },
 }
